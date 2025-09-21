@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <div class="container" role="application" aria-label="Weather application">
+    <section class="card" aria-labelledby="app-title">
+      <header class="app-head">
+        <div>
+          <h1 id="app-title">Weather Forcast</h1>
+          <p>Current weather & quick forecast</p>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="geo-btn" id="use-location" title="Use my location">📍 Use my location</button>
+        </div>
+      </header>
+
+      <div class="search" role="search" aria-label="City search">
+        <input id="city-input" type="search" placeholder="Enter city (e.g. Nairobi)" aria-label="City name" />
+        <button id="search-btn" aria-label="Search">Search</button>
+      </div>
+
+      <div id="status-area"></div>
+
+      <main id="weather-area"  aria-live="polite">
+        <div id="empty-state">
+          Type a city and press Search or use your location to get started.
+        </div>
+      </main>
+
+      <div class="credits">Data provided by OpenWeatherMap</div>
+    </section>
+
+    <aside class="card right-column" aria-labelledby="meta-title">
+      <div class="meta">
+        <div>
+          <h3 id="meta-title" style="margin:0;font-size:16px">Details</h3>
+          <div class="time" id="local-time">—</div>
+        </div>
+        <div id="mini-loader" aria-hidden="true" style="display:none"><span class="loader"></span></div>
+      </div>
+
+      <div id="details-area">
+        <div style="color:var(--muted);">Quick info will appear here</div>
+      </div>
+
+      <footer class="small">Tip: press Enter to search</footer>
+    </aside>
+  </div>
+
+  <script src="weather2.js">
+  </script>
+</body>
+</html>
