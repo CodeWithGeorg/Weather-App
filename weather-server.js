@@ -1,9 +1,13 @@
 import express from "express";
 import fetch from "node-fetch";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
-const PORT = 5000;
-const API_KEY = "aee530c3ab306f7f2fccea9e34c31664";
+const PORT = process.env.PORT || 5000;
+const API_KEY = process.env.API_KEY;
+
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
@@ -36,6 +40,11 @@ app.get("/weather/coords", async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: "Server error" });
   }
+});
+
+
+app.get("/", (req, res) => {
+  res.send("🌤️ Weather API backend is running successfully!");
 });
 
 app.listen(PORT, () => console.log(`✅ Backend running on http://localhost:${PORT}`));
