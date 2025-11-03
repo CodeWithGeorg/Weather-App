@@ -157,3 +157,15 @@ useLocBtn.addEventListener('click', () => {
 })();
 cityInput.focus();
  
+
+function toggleTheme (){
+ const toggle = document.querySelector(".toggle");
+
+ toggle.addEventListener('click', () => {
+   document.body.classList.toggle('dark');
+
+ })
+
+}
+
+toggleTheme();
