@@ -1,15 +1,16 @@
 :root{
-  --bg-color: rgba(150, 13, 230, 0.801);  
-  --bg1: rgb(7, 212, 150);
+  --bg-color: rgba(82, 83, 2, 0.801);  
+  --bg1: rgba(128, 98, 2, 0.616);
   --accent: #60a5fa;
   --glass: rgba(165, 6, 138, 0.06);
+  --text: black;
     --bg2: #0b1220;
     --card: rgba(255,255,255,0.05);
     
     
     --success: #34d399;
     --warning: #f59e0b;
-    --text: #e6eef8;
+ 
     --muted: #98a6bf;
     font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 
@@ -31,16 +32,17 @@
 
 
   body.dark{
-    --bg-color: rgba(3, 161, 3, 0.884);
-    --bg1: #8f0594;
+    --bg-color: rgba(103, 3, 161, 0.884);
+    --bg1: #730594cc;
      --accent: #7eca03;
     --bg2: #8d0230;
     --card: rgba(95, 5, 180, 0.05);
     --glass: rgba(233, 88, 4, 0.06);
+     --text: white;
    
     --success: #34d399;
     --warning: #f59e0b;
-    --text: #e6eef8;
+   
     --muted: #98a6bf;
   }
  .theme{
@@ -50,7 +52,7 @@
   padding: 10px;
   border-radius: 50%;
   border: 1px solid var(--accent);
-  background: transparent;
+  background: var(--bg1);
 
  }
 
